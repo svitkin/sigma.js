@@ -1066,7 +1066,7 @@ export default class Sigma<GraphType extends Graph = Graph> extends TypedEventEm
       if (edgeData.hidden || sourceData.hidden || targetData.hidden) {
         continue;
       }
-
+      console.log("DRAWING EDGE LABEL !!!!")
       this.settings.edgeLabelRenderer(
         context,
         {
