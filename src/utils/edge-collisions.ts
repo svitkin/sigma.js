@@ -22,6 +22,7 @@ export function doEdgeCollideWithPoint(
   yT: number,
   thickness: number,
 ): boolean {
+  console.log("THICKNESS WHEN DOING EDGE CURSOR DETECTION IS ", thickness)
   // Check first if point is out of the rectangle which opposite corners are the
   // source and the target, rectangle we expand by `thickness` in every
   // directions:
@@ -36,6 +37,6 @@ export function doEdgeCollideWithPoint(
   // https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line
   const distance =
     Math.abs((xT - xS) * (yS - y) - (xS - x) * (yT - yS)) / Math.sqrt(Math.pow(xT - xS, 2) + Math.pow(yT - yS, 2));
-
+  console.log("DISTANCE WHEN DOING EDGE CURSOR DETECTION IS ", distance)
   return distance < thickness / 2;
 }
