@@ -449,6 +449,7 @@ export default class Sigma<GraphType extends Graph = Graph> extends TypedEventEm
 
     // Handling mouse move
     this.activeListeners.handleMove = (e: MouseCoords): void => {
+      console.log("MOVE BEING HANDLED ", e)
       const baseEvent = {
         event: e,
         preventSigmaDefault(): void {
@@ -487,6 +488,7 @@ export default class Sigma<GraphType extends Graph = Graph> extends TypedEventEm
       }
 
       if (this.settings.enableEdgeHoverEvents === true) {
+        console.log("CHECKING EDGE HOVER EVENTS")
         this.checkEdgeHoverEvents(baseEvent);
       } else if (this.settings.enableEdgeHoverEvents === "debounce") {
         if (!this.checkEdgesEventsFrame)
