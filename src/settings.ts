@@ -43,7 +43,7 @@ export interface Settings {
   edgeLabelFont: string;
   edgeLabelSize: number;
   edgeLabelWeight: string;
-  edgePadding: number;
+  edgeHoverSize: number;
   edgeLabelColor: { attribute: string; color?: string } | { color: string; attribute?: undefined };
   stagePadding: number;
   // Labels
@@ -91,7 +91,7 @@ export const DEFAULT_SETTINGS: Settings = {
   labelColor: { color: "#000" },
   edgeLabelFont: "Arial",
   edgeLabelSize: 14,
-  edgePadding: 0,
+  edgeHoverSize: 1,
   edgeLabelWeight: "normal",
   edgeLabelColor: { attribute: "color" },
   stagePadding: 30,

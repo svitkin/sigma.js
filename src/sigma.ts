@@ -691,7 +691,7 @@ export default class Sigma<GraphType extends Graph = Graph> extends TypedEventEm
           targetPosition.x,
           targetPosition.y,
           // Adapt the edge size to the zoom ratio:
-          ((edgeDataCache[key].size + this.settings.edgePadding) * transformationRatio) / this.cameraSizeRatio,
+          ((this.settings.edgeHoverSize) * transformationRatio) / this.cameraSizeRatio,
         )
       ) {
         return true;
