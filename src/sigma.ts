@@ -648,6 +648,7 @@ export default class Sigma<GraphType extends Graph = Graph> extends TypedEventEm
    * the key of the edge if any, or null else.
    */
   private getEdgeAtPoint(x: number, y: number): string | null {
+    console.log("CHECKING EDGE AT POINT ", x, y)
     const { edgeDataCache, nodeDataCache } = this;
 
     // Check first that pixel is colored:
